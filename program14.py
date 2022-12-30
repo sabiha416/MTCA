@@ -1,11 +1,14 @@
-def extract_Digit(s):
-    n_Digit=0
-    for i in s:
-        if i in '0123456789':
-            n_Digit+=1
-    return n_Digit
+def printSeriesIncreasing(ch,n):
+    for i in range(1,n+1,1):
+        print(ch*i)
+    return None
+def printSeriesDecreasing(ch,n):
+    for i in range(1,0,-1):
+        print(ch*i)
+    return None
 
-
-str1=input()
-a=extract_Digit(str1)
-print("no of vowels in:'",str1,"' is",a)
+inpch=input("Enter a charecter:")
+inpNum=int(input("Enter a no:"))
+printSeriesIncreasing(inpch,inpNum)
+print('-'*40)
+printSeriesDecreasing(inpch,inpNum)

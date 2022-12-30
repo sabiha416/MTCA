@@ -1,7 +1,17 @@
-one=2
-two=1
-three=4
-one += 3* two
-print('one:',one)
-two -= 3 * one + three
-print('two:',two)
+def div(a,b):       
+    assert (b!=0),"Division by zero is not defined"
+    return a/b
+
+try:
+    print (div(55,0))
+except AssertionError as obj:
+    print(obj)
+try:
+    print (div(20,3))
+except AssertionError as obj:
+    print(obj)
+try:
+    print (div(100,20))
+except AssertionError as obj:
+    print(obj)
+
