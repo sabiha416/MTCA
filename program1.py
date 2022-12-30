@@ -1,10 +1,14 @@
-string='''
-practice problems for list com pre hension in python.
-'''
+def printSeriesIncreasing(ch,n):
+    for i in range(1,n+1,1):
+        print(ch*i)
+    return None
+def printSeriesDecreasing(ch,n):
+    for i in range(1,0,-1):
+        print(ch*i)
+    return None
 
-wordLst=string.split(' ')
-print(wordLst)
-wordLst=[i.strip("\n") for i in wordLst]
-print(wordLst)
-ans={i:len(i) for i in wordLst}
-print(ans)
+inpch=input("Enter a charecter:")
+inpNum=int(input("Enter a no:"))
+printSeriesIncreasing(inpch,inpNum)
+print('-'*40)
+printSeriesDecreasing(inpch,inpNum)
