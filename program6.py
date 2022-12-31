@@ -1,9 +1,10 @@
-def replace3by5(n):
-    n=str(n)
-    n=n.replace('3','.')
-    n=n.replace('5','3')
-    n=n.replace('.','5')
-    return n
+num1=int(input("Enter a number:"))
+num2=int(input("Enter a number:"))
 
-inp=int(input())
-print(replace3by5(inp))
+try:
+    res=num1/num2
+except ZeroDivisionError:
+    print("Division by zero not allowed")
+else:
+    print(num1,'/' ,num2, '=',res)
+print('thanks')

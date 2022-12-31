@@ -1,7 +1,14 @@
-student=[[44,'prasad',75,87],[13,'gangully',82,79],[53,'sashikala',72,80],[35,'manohar',86,85]]
-student.sort()
-print(student)
-student.sort(key=lambda temp:temp[2])
-print(student)
-student.sort(key=lambda temp:temp[3])
-print(student)
+def Factorial(num):
+    assert(num>=0),"factorial of negative is not defined!"
+    if num==0:
+        return 1
+    else:
+        return num*Factorial(num-1)
+try:
+    print(Factorial(-45))
+except Exception as obj:
+    print(obj)
+try:
+    print(Factorial(45))
+except Exception as obj:
+    print(obj)        

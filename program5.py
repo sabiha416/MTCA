@@ -1,16 +1,24 @@
-def checkArmstrongNumber(num):
-    num=str(num)
-    n=len(num)
-    total=0
-    for i in num:
-        total+=int(i)**n
-    if  int(num)==total:
-         return 1
-    else:
-         return 0
+def div(a,b):
+    assert( isinstance(a,int) or isinstance(a,float)),\
+            'first Argument should be either Integer or float'
+    assert( isinstance(b,int) or isinstance(b,float)),\
+            'second Argument should be either Integer or float'       
+    assert (b!=0),"Division by zero is not defined"
+    return a/b
 
-inpNum=int(input())
-if checkArmstrongNumber(inpNum):
-    print("yes")
-else:
-    print("no")
+try:
+    print (div(55,0))
+except AssertionError as obj:
+    print(obj)
+try:
+    print (div(20,3))
+except AssertionError as obj:
+    print(obj)
+try:
+    print (div('hello',20))
+except AssertionError as obj:
+    print(obj)
+try:
+    print (div(20,'hello'))
+except AssertionError as obj:
+    print(obj)
