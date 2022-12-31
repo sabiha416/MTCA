@@ -1,16 +1,7 @@
-def fun(str1):
-    print(str1)
-    return
-fun("I'm first call to user defined function!")
-fun("Again second call to the same function")
-
-
-def printme(srt1,n):
-    n[0]='sabiha'
-    print(str1,n)
-    return
-
-x=['sabiha','joshna']
-print("Wakeup",x)
-print('x:',x)
-
+student=[[44,'prasad',75,87],[13,'gangully',82,79],[53,'sashikala',72,80],[35,'manohar',86,85]]
+student.sort()
+print(student)
+student.sort(key=lambda temp:temp[2])
+print(student)
+student.sort(key=lambda temp:temp[3])
+print(student)

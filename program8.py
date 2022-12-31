@@ -1,9 +1,6 @@
-import sqlite3 as lite
-con=lite.connect('mtica.db')
+def binToDecimal(n):
+    temp=int(n,2)
+    return temp
 
-
-cur=con.cursor()
-cur.execute("SELECT * FROM cars")
-rows=cur.fetchall()
-for row in rows:
-    print(row)
+inp=input()
+print(binToDecimal(inp))

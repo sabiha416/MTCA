@@ -1,12 +1,9 @@
-def add(*n):
-    temp=0
-    for i in n:
-        temp+=i
-    return temp
+def replace3by5(n):
+    n=str(n)
+    n=n.replace('3','.')
+    n=n.replace('5','3')
+    n=n.replace('.','5')
+    return n
 
-
-print("add():",add())
-print("add(5):",add(5))
-print("add(5,7):",add(5,7))
-print("add(5,7,2):",add(5,7,2))
-print("add(5,7,2,11,55,77,22):",add(5,7,2,11,55,77,22))
+inp=int(input())
+print(replace3by5(inp))
