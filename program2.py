@@ -1,14 +1,10 @@
-def Factorial(num):
-    assert(num>=0),"factorial of negative is not defined!"
-    if num==0:
-        return 1
+months={1:'january',2:'febrauary',3:'march',4:'april',5:'may',6:'june',7:'july',8:'august',9:'september',10:'october',11:'november',12:'december',}
+
+n=int(input())
+
+for count in range(n):
+    mn=int(input())
+    if mn>=1 and mn<=12:
+        print(months[mn])
     else:
-        return num*Factorial(num-1)
-try:
-    print(Factorial(-45))
-except Exception as obj:
-    print(obj)
-try:
-    print(Factorial(45))
-except Exception as obj:
-    print(obj)        
+        print("invalid")

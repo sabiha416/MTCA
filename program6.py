@@ -1,10 +1,7 @@
-num1=int(input("Enter a number:"))
-num2=int(input("Enter a number:"))
+employees = ['sabiha','joshna','jeevana']
+defaults = {"designstion": 'Developer',"salary":80000}
 
-try:
-    res=num1/num2
-except ZeroDivisionError:
-    print("Division by zero not allowed")
-else:
-    print(num1,'/' ,num2, '=',res)
-print('thanks')
+data = dict.fromkeys(employees,defaults)
+print(data)
+
+print(data["sabiha"])

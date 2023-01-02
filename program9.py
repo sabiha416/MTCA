@@ -1,6 +1,11 @@
-num1=int(input("enter a no:"))
-if num1%2== 0:
-    print(num1, 'is even')
+sample_dict = {
+    "name": "kelly",
+    "age":25,
+    "salary":8000,
+    "city": "New york"}
+keys=["name","salary"]
 
-if num1%2== 1:
-    print("we learnt if keyword")
+
+for k in keys:
+    sample_dict.pop(k)
+print(sample_dict)

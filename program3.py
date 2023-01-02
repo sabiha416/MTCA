@@ -1,24 +1,18 @@
-def Factorial(num):
-    assert(isinstance(num,int)),"factorial not defined for non integers"
-    assert(num>=0),"factorial of negative is not defined!"
-    if num==0:
-        return 1
-    else:
-        return num*Factorial(num-1)
-try:
-    print(Factorial(-45))
-except Exception as obj:
-    print(obj)
-try:
-    print(Factorial(4.9))
-except Exception as obj:
-    print(obj)
-try:
-    print(Factorial(45))
-except Exception as obj:
-    print(obj)
+def findFrequency(s):
+    FrequencyDict=dict()
+    for i in s:
+        if i in FrequencyDict:
+            FrequencyDict[i]+=1
+        else:
+            FrequencyDict[i]=1
+    return FrequencyDict
+def formatOutput(d):
+    for i in sorted(d):
+        print(i,d[i])
+    
 
-try:
-    print(Factorial('today'))
-except Exception as obj:
-    print(obj)
+
+n=int(input())
+for i in range(n):
+    inpstr=input()
+    formatOutput(findFrequency(inpstr))

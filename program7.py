@@ -1,17 +1,17 @@
-num1=input("Enter a number:")
-num2=input("Enter a number:")
 
-try:
-    res=int(num)/int(num2)
-except ZeroDivisionError:
-    print("Exception handled by sabiha")
-except ValueError:
-    print("Exception handled by joshna")
-except Exception as ob:
-    print(ob)
-else:
-    print(num1,'/' ,num2, '=',res)
-finally:
-    print('thanks')
+sample_dict = {
+    "name": "kelly",
+    "age":25,
+    "salary":8000,
+    "city": "New york"}
+keys=["name","salary"]
 
-print("visit again at python class at MTICA")
+newDict={}
+for i in keys:
+    newDict[i]=sample_dict[i]
+print(newDict)
+
+
+##newDict={i:sample_dict[i] for i in keys}
+##print(newDict)
+    

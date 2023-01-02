@@ -1,17 +1,11 @@
-def checkEvenOdd(num1):
-    assert(num1>0),"Negative numbers"
-    if num1%2==0:
-        return "Even"
-    else:
-        return "Odd"
+sample_dict = {
+    "name": "kelly",
+    "age":25,
+    "salary":8000,
+    "city": "New york"}
+keys=["name","salary"]
 
-
-for i in range(3):
-    num=int(input("Enter a no:"))
-    try:
-        print(num,"is",checkEvenOdd(num))
-    except AssertionError as ob:
-        print(ob)
-        
-
-
+d=dict()
+for i in sample_dict.keys()-keys:
+    d[i]=sample_dict[i]
+print(d)

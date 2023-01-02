@@ -1,9 +1,7 @@
-num1=int(input("Enter a no:"))
-num2=int(input("Enter a no:"))
-res=num1+num2
+sample_dict={'a':100,'b':200,'c':300}
+if 200 in sample_dict.values():
+    print("200 present in a dict")
 
-print(num1,'+',num2,'=',res,sep='')
-
-
-##print(str(num1)+ '+' + str(num2) +'=' +str(res))
-##print(num1,'+',num2,'=',num1+num2)
+for k,v in sample_dict.items():
+    if v==200:
+        print("for",v,"key is",k)
