@@ -1,8 +1,10 @@
-set1 = {10,20,30,40,50}
-set2 = {60,70,80,90,10}
+def sum_num(x):
+    res=0
+    for i in range (x+1):
+        res=res + i
+        yield("i=",i,"res=",res)
+    return res
 
-if set1.isdisjoint(set2):
-    print("Two sets have no items in common")
-else:
-    print("Two sets have no items in common")
-    print(set1.intersection(set2))
+ob=sum_num(10)
+for i in range(11):
+    print(next(ob))

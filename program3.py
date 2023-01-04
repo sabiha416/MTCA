@@ -1,6 +1,24 @@
-set1 = {10,20,30,40,50}
-set2 = {30,40,50,60,70}
-
-print(set1.union(set2))
-#remove duplicates.
-print(set1^set2)
+def printBlue():
+    print('you chose blue!\n')
+    return
+def printRed():
+    print('you chose Red!\n')
+def printOrange():
+    print('you chose Orange!\n')
+def printYellow():
+    print('you chose Yellow!\n')
+def choice():
+    print("0:Blue")
+    print("1:Red")
+    print("2:Orange")
+    print("3:Yellow")
+    print("4:Quit")
+    return
+colorSelect={0:printBlue, 1:printRed, 2:printOrange, 3:printYellow}
+selection=0
+while True:
+    if selection==4:break
+    choice()
+    selection=int(input("select a color option:"))
+    if(selection>=0) and (selection<4):
+        colorSelect[selection]()

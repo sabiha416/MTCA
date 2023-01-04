@@ -1,9 +1,17 @@
-set1 = {10,20,30,40,50}
-set2 = {30,40,50,60,70}
+def sum_series(a,b):
+    assert (a<b),"first argument should be smaller than second."
+    total=0
+    for i in range(a,b,1):
+        total=total+1
+        yield total
 
-##print(set1.symmetric_difference_update(set2))
-##print(set1)
-
-
-set1.intersection_update(set2)
-print(set1)
+n1=int(input())
+n2=int(input())
+ob=sum_series(n1,n2)
+x=0
+try:
+    while x<10:
+        print(next(ob))
+        x=x+1
+except AssertionError as ae:
+    print(ae)

@@ -1,18 +1,17 @@
-class Cat:
-    def __init__(self,color,legs):
-        self.color=color
-        self.legs=legs
-    def __str__(self):
-        temp="cat is "+self.color +'color' +'and has'+str(self.legs)+str(self.color)
-        return temp
+spins=[('red','18'),('black','13'), ('red','7'),
+       ('red','5'),('red','18'),('black','13'),('red','25'),
+       ('red','9'),('black','26'), ('black','15'),
+       ('black','20'),('black','31'), ('red','3')]
 
-if __name__=="__main__":
-    pet1=Cat("ginger",4)
-    print(pet1.legs)
-    print(pet1.color)
-    print(pet1)
+def countReds(aList):
+    count=0
+    for color,number in aList:
+        if color == 'black':
+            yield count
+            count=0
+        else:
+            count +=1
+        yield count
 
-    pet2=Cat("brown",3)
-    print(pet2.legs)
-    print(pet2.color)
-    print(pet2)
+gaps=[gap for gap in countReds(spins)]
+print(gaps)

@@ -1,20 +1,18 @@
-class Number:
-    def __init__(self,num1,num2):
-        self.num1=num1
-        self.num2=num2
-    def add(self):
-        return self.num1+self.num2
-    def sub(self):
-        return self.num1*self.num2
-    def mult(self):
-        return self.num1*self.num2
-    def division(self):
-        return self.num1/self.num2
-        
-n1=int(input())
-n2=int(input())
-ob=Number(n1,n2)
-print(n1,'+',n2,'=',ob.add(),sep='')
-print(n1,'-',n2,'=',ob.sub(),sep='')
-print(n1,'*',n2,'=',ob.mult(),sep='')
-print(n1,'/',n2,'=',ob.division(),sep='')
+x=5;y=7
+def changeme(mylist):
+    "This function demonstrates local and global variables"
+    p=89
+    global x,y
+    x=x+2
+    mylist=[1,2,3,4]
+
+    print("values inside the function:",mylist)
+    print("local variables are:",locals())
+    print("global variables are:",globals())
+    return
+mylist_var=[10,20,30]
+changeme(mylist_var)
+print("values outside the function:",mylist_var)
+
+    
+

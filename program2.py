@@ -1,4 +1,5 @@
-sample_set = {"Yellow","Orange","Black"}
-sample_list = ["Blue","Green","red"]
-sample_set.update(sample_list)
-print(sample_set)
+def solveProblem(s):
+    lst=s.split()
+    return[len(i) for i in lst]
+inp=input()
+print(*solveProblem(inp))

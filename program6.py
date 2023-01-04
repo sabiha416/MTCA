@@ -1,4 +1,9 @@
-set1 = {10,20,30,40,50}
-set2 = {30,40,50,60,70}
-
-print(set1.symmetric_difference(set2))
+def demo_Yield():
+    print("code segment1 executed")
+    x=7
+    yield x*x
+    print("code segment2 executed")
+    yield 2
+    print("code segment1 executed")
+    yield 3
+    print("code segment4 4xecuted")
