@@ -1,17 +1,19 @@
-def sum_series(a,b):
-    assert (a<b),"first argument should be smaller than second."
-    total=0
-    for i in range(a,b,1):
-        total=total+1
-        yield total
+class A:
+    def first_Method(self):
+        print("Method of class A...")
+class B:
+    def second_Method(self):
+        print("Method of class B...")
 
-n1=int(input())
-n2=int(input())
-ob=sum_series(n1,n2)
-x=0
-try:
-    while x<10:
-        print(next(ob))
-        x=x+1
-except AssertionError as ae:
-    print(ae)
+class C(A,B):
+    def third_Method(self):
+        print("Method of class C...")
+        
+         
+
+if __name__=='__main__':
+    ob=C()
+    ob.first_Method()
+    ob.second_Method()
+    ob.third_Method()
+

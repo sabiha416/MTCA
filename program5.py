@@ -1,28 +1,24 @@
-def printAdd(a,b):
-    return a+b
-def printSub(a,b):
-    return a-b
-def printMult(a,b):
-    return a*b
-def printDiv(a,b):
-    return a/b
-def choice():
-    print("+:Addition");
-    print("-:Substraction");
-    print("*:Multiplication");
-    print("/:Division")
-    return
-colorSelect={"+":printAdd, "-":printSub, "*":printMult, "/":printDiv}
-while True:
-    choice()
-    selection=input("select an arithmetic operation:")
-    if selection=='q' or selection=='Q': break
-    if ((selection=='+') or (selection=='-') or
-    (selection=='*') or (selection=='/')):
-        n1=int(input("Enter first no:"))
-        n2=int(input("Enter second no:"))
-        z=colorSelect[selection](n1,n2)
-        print(n1,selection,n2,'=',z)
-    
-    
+class Animal:
+    def __init__(self,name,color):
+        self.color=color
+        self.name=name
+class Cat(Animal):
+    def mew(self):
+        print("Cat meows")
+class Dog(Animal):
+    def bark(self):
+        print("Woof")
+
+
+if __name__=="__main__":
+    print(__name__)
+    pet1=Dog("Tommy","Brown")
+    pet2=Cat("lucy","white")
+    pet1.bark()
+    pet2.mew()
+    print(pet1.name)
+    print(pet2.name)
+
+
+
 

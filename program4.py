@@ -1,26 +1,23 @@
-def printSun():
-    print("Sunday")
-    return
-def printMon():
-    print("Monday")
-def printTue():
-    print("Tuesday")
-def printWed():
-    print("Wednesday")
-def printThu():
-    print("Thursday")
-def printFri():
-    print("Friday")
-def printSat():
-    print("Saturday")
-def choice():
-    print("Enter day number between 1-7")
-dayDict={1:printSun, 2:printMon, 3:printTue, 4:printWed, 5:printThu, 6:printFri, 7:printSat}
-choice()
-dayNo=int(input())
-if dayNo>=1 and dayNo<=7:
-    dayDict[dayNo]()
-else:
-    print("INVALID")
+class Wolf:
+    price=500  #Class attribute created by variables within
+           #the body of the class
+    def __init__(self,name,color):
+        self.color=color
+        self.name=name
+    def bark(self):
+        print("Grr...")
+class Dog(Wolf):
 
-   
+    def bark1(self):
+        print("Wolf")
+
+
+if __name__=="__main__":
+    pet1=Dog("Tommy","Brown")
+    pet1.bark()
+    pet1.bark1()
+    print(pet1.name,"is of color",pet1.color)
+
+
+
+

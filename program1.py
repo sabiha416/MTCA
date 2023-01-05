@@ -1,6 +1,12 @@
-inp=input()
-temp=inp.split()
-ans=[]
-for i in temp:
-    ans=[len(i) for i in temp]
-print(*ans)
+##def reverseString(s):
+##    ans=[i[::-1] for i in s]
+##    return ans
+##inp=input().split()
+##print(*reverseString(inp))
+
+##inp=input()
+inp=input().split()
+print('elppa aug ognam')
+
+
+

@@ -1,9 +1,20 @@
-def demo_Yield():
-    print("code segment1 executed")
-    x=7
-    yield x*x
-    print("code segment2 executed")
-    yield 2
-    print("code segment1 executed")
-    yield 3
-    print("code segment4 4xecuted")
+class Wolf:
+    def __init__(self,name,color):
+        self.color=color
+        self.name=name
+    def bark(self):
+        print("Grr...")
+        
+class Dog(Wolf):
+    def bark(self):
+        print("Woof")
+
+
+pet1=Dog("Tommy","Brown")
+pet1.bark()
+pet2=Wolf("jimmy","grey")
+pet2.bark()
+Dog("abc","xyz").bark()
+   
+
+

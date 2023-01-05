@@ -1,10 +1,19 @@
-def sum_num(x):
-    res=0
-    for i in range (x+1):
-        res=res + i
-        yield("i=",i,"res=",res)
-    return res
+class A:
+    def first_Method(self):
+        print("Method of class A...")
+class B(A):
+    def second_Method(self):
+        print("Method of class B...")
 
-ob=sum_num(10)
-for i in range(11):
-    print(next(ob))
+class C(A,B):
+    def third_Method(self):
+        print("Method of class C...")
+        
+         
+
+if __name__=='__main__':
+    ob=C()
+    ob.first_Method()
+    ob.second_Method()
+    ob.third_Method()
+

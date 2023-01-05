@@ -1,24 +1,25 @@
-def printBlue():
-    print('you chose blue!\n')
-    return
-def printRed():
-    print('you chose Red!\n')
-def printOrange():
-    print('you chose Orange!\n')
-def printYellow():
-    print('you chose Yellow!\n')
-def choice():
-    print("0:Blue")
-    print("1:Red")
-    print("2:Orange")
-    print("3:Yellow")
-    print("4:Quit")
-    return
-colorSelect={0:printBlue, 1:printRed, 2:printOrange, 3:printYellow}
-selection=0
-while True:
-    if selection==4:break
-    choice()
-    selection=int(input("select a color option:"))
-    if(selection>=0) and (selection<4):
-        colorSelect[selection]()
+class Dog:
+    price=400  #Class attribute created by variables within
+           #the body of the class
+    def __init__(self,name,color):
+        self.color=color
+        self.name=name
+    def bark(self):
+        print("woof")
+        print(self.name, "has",self.price,"price and its color is",self.color)
+        
+
+if __name__=="__main__":
+    pet1=Dog("Tommy","Brown")
+    pet2=Dog("sheru","white")
+    pet1.bark()
+    pet2.bark()
+    print(pet1.price)
+    print(pet2.price)
+    print(Dog.price)
+    Dog('abc','blue').bark()
+
+
+
+
+
